@@ -1,5 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import QR
 
 # Create your views here.
 def render_my_qr(request):
-    return render(request, 'qr.html')
+    qrcodes = QR.objects.all()
+
+    if request.method == "POST":
+        for key in request.POST:
+            if key.startswith("del-"):
+                qr_id = key.split("-")[1]
+                QR.objects.filter(pk=qr_id).delete()
+                return redirect('my_qr')
+
+    return render(request, 'qr.html', context={'qrs': qrcodes})

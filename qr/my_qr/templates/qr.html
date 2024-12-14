@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Мої QR-Коди{% endblock %}
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myqrs.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Мої QR-Коди</h1>
+        <div>
+            <form class="qr-code" method="post">
+                {% for qr in qrs %}
+                    <h2>{{ qr.url }}</h2>
+                    <hr color="#C7CCDA">
+                    <div>
+                        {% csrf_token %}
+                        <img src="https://preview.redd.it/this-is-the-qr-code-for-never-gonna-give-you-up-by-rick-v0-7hwn5m9ngmf91.jpg?width=640&crop=smart&auto=webp&s=b2d24dfd354fb0f40921b0ccac20911f4bcb3927" alt="">
+                        <button type="submit" name="del-{{ qr.pk }}">Видалити</button>
+                    </div>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+{% endblock %}

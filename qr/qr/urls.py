@@ -31,7 +31,7 @@ urlpatterns = [
     path('contacts/', render_contacts),
     path('gen/', render_gen_qr),
     path('home/', render_home),
-    path('myqr/', render_my_qr),
+    path('myqr/', render_my_qr, name='my_qr'),
     path('reg/', render_reg),
     path('settings/', render_settings),
 ]
