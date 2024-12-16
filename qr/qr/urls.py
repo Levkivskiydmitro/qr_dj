@@ -27,11 +27,11 @@ from settings.views import render_settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', render_auth),
-    path('contacts/', render_contacts),
-    path('gen/', render_gen_qr),
-    path('home/', render_home),
+    path('', render_home),
+    path('auth/', render_auth, name='auth'),
+    path('contacts/', render_contacts, name='contacts'),
+    path('gen/', render_gen_qr, name='gen'),
     path('myqr/', render_my_qr, name='my_qr'),
-    path('reg/', render_reg),
-    path('settings/', render_settings),
+    path('reg/', render_reg, name='reg'),
+    path('settings/', render_settings, name='settings'),
 ]
