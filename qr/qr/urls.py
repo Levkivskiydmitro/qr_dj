@@ -27,7 +27,7 @@ from settings.views import render_settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', render_home),
+    path('', render_home, name='home'),
     path('auth/', render_auth, name='auth'),
     path('contacts/', render_contacts, name='contacts'),
     path('gen/', render_gen_qr, name='gen'),

@@ -5,27 +5,33 @@
 {% block title %}Головна сторінка{% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'gen.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
 {% endblock %}
 
 
 {% block body %}
-    <div>
+    <div class="container sub">
         <h1>Free</h1>
-        <hr>
+        <hr color="C7CCDA">
         <p>безкоштовно зареєстрованому користувачеві можна створити один QR-код на 6-ть місяців.</p>
-        <p>Вже придбана</p>
+        <div>
+            <span class="blue">Вже придбана</span>
+        </div>
     </div>
-    <div>
+    <div class="container sub">
         <h1>Standart</h1>
-        <hr>
+        <hr color="C7CCDA">
         <p>вартість підписки 2 $ на місяць. 10 кастомізованих QR-кодів.</p>
-        <a href="">Придбати: 2$</a>
+        <div>
+            <a href="{% url 'settings' %}" class="blue">Придбати: 2$</a>
+        </div>
     </div>
-    <div>
+    <div class="container sub">
         <h1>Pro</h1>
-        <hr>
+        <hr color="C7CCDA">
         <p>до 100 QR-кодів, підписка 10 $ на місяць.</p>
-        <a href="">Придбати: 10$</a>
+        <div>
+            <a href="{% url 'settings' %}" class="blue">Придбати: 10$</a>
+        </div>
     </div>
 {% endblock %}

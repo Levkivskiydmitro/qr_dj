@@ -8,17 +8,19 @@
 
     {% load static %}
 
-    <link rel="stylesheet" href="{% static 'base.css' %}">
-
     {% block head %}
     {% endblock %}
+
+    <link rel="shortcut icon" href="{% static 'logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+
 </head>
 <body>
     <nav>
         <img src="{% static 'logo.png' %}">
         <h2>MY QR</h2>
         <div>
-            <a href="">Головна</a>
+            <a href="{% url 'home' %}">Головна</a>
             <a href="{% url 'gen' %}">Згенерувати QR-код</a>
             <a href="{% url 'my_qr' %}">Мої QR-коди</a>
             <a href="{% url 'contacts' %}">Контакти</a>

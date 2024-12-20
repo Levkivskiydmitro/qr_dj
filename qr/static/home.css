@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.sub {
+    width: 972px;
+    height: 257px;
+}
+
+.sub * {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.sub h1 {
+    font-weight: bolder;
+    font-size: 32px;
+
+    height: 39px;
+}
+
+.sub hr {
+    height: 3px; 
+    border-radius: 10px;
+}
+
+.sub p {
+    font-size: 24px;
+}
+
+.sub div {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
