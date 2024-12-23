@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-import qrcode
+import qrcodes
 import os
 
 # Create your views here.
@@ -15,7 +15,7 @@ def render_gen_qr(request):
 
             path = os.path.join('qrcodes', f"qr_code_{next_number}.png")
 
-            qr = qrcode.make(url)
+            qr = qrcodes.make(url)
             qr.save(path)
 
     return render(request, 'gen.html')
