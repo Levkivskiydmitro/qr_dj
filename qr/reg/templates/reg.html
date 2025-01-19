@@ -4,7 +4,7 @@
 {% load static %}
 
 
-{% block title %}Регистрація{% endblock %}
+{% block title %}Реєстрація{% endblock %}
 
 
 {% block head %}
@@ -14,12 +14,12 @@
 
 {% block body %}
     <form method="post">
-        <h1>Регистрація</h1>
+        <h1>Реєстрація</h1>
         {% csrf_token %}
-        <input type="text" placeholder="Ведіть ім'я сюди..." required>
-        <input type="text" placeholder="Ведіть прізвище сюди..." required>
-        <input type="text" placeholder="Ведіть email сюди..." required>
-        <input type="text" placeholder="Ведіть пароль сюди..." required>
+        <input type="text" name="username" placeholder="Ведіть ім'я сюди..." required>
+        <input type="text" name="surname" placeholder="Ведіть прізвище сюди..." required>
+        <input type="text" name="email" placeholder="Ведіть email сюди..." required>
+        <input type="text" name="password" placeholder="Ведіть пароль сюди..." required>
         <button>Зареєструватись</button>
     </form>
 {% endblock %}
