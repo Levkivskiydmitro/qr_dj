@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import QR
+from gen_qr.models import QR
 
 # Create your views here.
 def render_my_qr(request):

@@ -11,13 +11,13 @@
     {% block head %}
     {% endblock %}
 
-    <link rel="shortcut icon" href="{% static 'logo.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'media/logo.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'base.css' %}">
 
 </head>
 <body>
     <nav>
-        <img src="{% static 'logo.png' %}">
+        <img src="{% static 'media/logo.png' %}">
         <h2>MY QR</h2>
         <div>
             <a href="{% url 'home' %}">Головна</a>
@@ -25,8 +25,9 @@
             <a href="{% url 'my_qr' %}">Мої QR-коди</a>
             <a href="{% url 'contacts' %}">Контакти</a>
             <a href="{% url 'settings' %}">Підписки</a>
-            <a href="{% url 'reg' %}" class="blue">Регистрація</a>
+            <a href="{% url 'reg' %}" class="blue">Реєстрація</a>
             <a href="{% url 'auth' %}" class="blue">Авторизація</a>
+            <p>{{ request.user.username }}</p>
         </div>
     </nav>
     <div id="body">

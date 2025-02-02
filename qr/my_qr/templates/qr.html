@@ -8,15 +8,25 @@
 
 {% block body %}
     <div>
+        {% load static %}
         <h1>Мої QR-Коди</h1>
         <div>
             <form class="qr-code" method="post">
+                {% csrf_token %}
                 {% for qr in qrs %}
                     <h2>{{ qr.url }}</h2>
                     <hr color="#C7CCDA">
                     <div>
-                        {% csrf_token %}
-                        <img src="https://preview.redd.it/this-is-the-qr-code-for-never-gonna-give-you-up-by-rick-v0-7hwn5m9ngmf91.jpg?width=640&crop=smart&auto=webp&s=b2d24dfd354fb0f40921b0ccac20911f4bcb3927" alt="">
+                        <img src="{% static 'qr/img/qr_{{ qr.pk }}.png' %}" alt="QR Code">
+                        <p>
+                            Сайт: Youtube<br>
+                            Розмір: 400x400<br>
+                            Колір QR Коду: чорний<br>
+                            Форма коду: квадратний<br>
+                            Зображення в середині: немає<br>
+                            <br>
+                            Створений: 1.01.1970
+                        </p>
                         <button type="submit" name="del-{{ qr.pk }}">Видалити</button>
                     </div>
                 {% endfor %}

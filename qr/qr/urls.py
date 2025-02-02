@@ -25,9 +25,13 @@ from my_qr.views import render_my_qr
 from reg.views import render_reg
 from settings.views import render_settings
 
+from django.conf import settings 
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', render_home, name='home'),
+    path('home/', render_home, name='home'),
+    path('', render_home),
     path('auth/', render_auth, name='auth'),
     path('contacts/', render_contacts, name='contacts'),
     path('gen/', render_gen_qr, name='gen'),
@@ -35,3 +39,6 @@ urlpatterns = [
     path('reg/', render_reg, name='reg'),
     path('settings/', render_settings, name='settings'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

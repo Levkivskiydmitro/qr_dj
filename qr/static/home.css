@@ -4,6 +4,44 @@ body {
     overflow: hidden;
 }
 
+/*#body {
+    display: flex;
+    flex-direction: column;
+}
+
+#body * {
+    flex-shrink: 0;
+}*/
+
+.info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+
+    width: 972px;
+    height: 160px;
+
+    background-color: #D9E8FF;
+
+    border-radius: 40px;
+    padding: 15px 20px;
+}
+
+.info img {
+    width: 30px;
+    height: 30px;
+}
+
+.info span {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.info p {
+    font-size: 24px;
+}
+
 * {
     font-family: 'Inter', sans-serif;
     user-select: none;
@@ -41,7 +79,9 @@ body {
 
 .sub div {
     display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    height: 140px;
 }
