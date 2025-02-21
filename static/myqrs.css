@@ -1,0 +1,52 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    background-color: white;
+    border-radius: 27px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #285FEF;
+    border-radius: 100px;
+    border: none;
+    padding: 15px 22px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #0030B1;
+    cursor: pointer;
+}
+.settings {
+    width: 1036px;
+    height: 571px;
+}
+.settings-div {
+    display: flex;
+    flex-direction: column;
+    width: 1015px;
+    height: 404px;
+    background-color: #ECEFF7;
+    overflow-x: hidden;
+    border-radius: 30px;
+    padding: 10px;
+    gap: 10px;
+}
+
+img {
+    width: 170px;
+    height: 170px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
