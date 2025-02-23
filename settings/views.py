@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from .forms import CardForm
-from .models import Card
+from django.http import HttpResponse
 
 # Create your views here.
-def render_card(request):
+def render_card(request: HttpResponse):
     form = CardForm(request.POST)
 
     if request.method == "POST":
@@ -12,5 +12,5 @@ def render_card(request):
 
     return render(request, 'card.html', context={'form': form})
 
-def render_settings(request):
+def render_settings(request: HttpResponse):
     return render(request, 'settings.html')

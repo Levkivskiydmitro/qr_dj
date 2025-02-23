@@ -11,8 +11,6 @@
 
 {% block body %}
     {% load static %}
-    <br>
-    <br>
     <div class="info">
         <img src="{% static 'media/inform.svg' %}" alt="">
         <p><span>My QR</span> — це зручний і швидкий сервіс для генерації QR-кодів, який спрощує обмін інформацією. З його допомогою ви зможете створити QR-коди для посилань, контактів, текстів, Wi-Fi та багато іншого всього за кілька секунд. </p>
@@ -38,6 +36,14 @@
         <h1>Pro</h1>
         <hr color="C7CCDA">
         <p>до 100 QR-кодів, підписка 10 $ на місяць.</p>
+        <div>
+            <a href="{% url 'settings' %}" class="blue">Придбати: 10$</a>
+        </div>
+    </div>
+    <div class="container sub">
+        <h1>Desktop</h1>
+        <hr color="C7CCDA">
+        <p>до 10 QR-кодів на файли та додатки, підписка 10 $ на місяць.</p>
         <div>
             <a href="{% url 'settings' %}" class="blue">Придбати: 10$</a>
         </div>

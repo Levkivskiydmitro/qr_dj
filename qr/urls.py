@@ -38,7 +38,7 @@ urlpatterns = [
     path('myqr/', render_my_qr, name='my_qr'),
     path('reg/', render_reg, name='reg'),
     path('settings/', render_settings, name='settings'),
-    path('settings/card/', render_card),
+    path('settings/card/', render_card, name='card'),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
