@@ -23,7 +23,7 @@ from gen_qr.views import render_gen_qr
 from home.views import render_home
 from my_qr.views import render_my_qr
 from reg.views import render_reg
-from settings.views import render_settings
+from settings.views import render_settings, render_card
 
 from django.conf import settings 
 from django.conf.urls.static import static
@@ -38,6 +38,7 @@ urlpatterns = [
     path('myqr/', render_my_qr, name='my_qr'),
     path('reg/', render_reg, name='reg'),
     path('settings/', render_settings, name='settings'),
+    path('settings/card/', render_card),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
