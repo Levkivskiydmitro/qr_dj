@@ -50,14 +50,16 @@ h2 {
 
 .sub-content {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
 }
+
 
 .sub-btns {
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
+    justify-content: flex-end;
+    max-width: 180px;
 
     gap: 10px;
 }
