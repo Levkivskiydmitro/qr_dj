@@ -19,7 +19,7 @@
                     <div>
                         <img src="{{ qr.img.url }}" alt="QR Code">
                         <p>
-                            Сайт: {{ qr.url }}<br> <!--qr.site-->
+                            Сайт: {{ qr.url }}<br>
                             Розмір: 400x400<br>
                             Колір QR Коду: {{ qr.color }}<br>
                             Форма коду: {{ qr.shape }}<br>
@@ -27,10 +27,9 @@
                             <br>
                             Створений: {{ qr.date }}
                         </p>
-                        <div>
-                            <img src="{{ qr.image.url }}" alt="QR-код">
+                        <div class="buttons">
                             <button type="submit" name="del-{{ qr.pk }}">Видалити</button>
-                            <a href="?download_local={{ qr.id }}" class="btn btn-primary">Завантажити</a>
+                            <a href="{{ qr.img.url }}" download="qrcode_{{ qr.pk }}.png">Завантажити</a>
                         </div>
                     </div>
                 {% endfor %}
