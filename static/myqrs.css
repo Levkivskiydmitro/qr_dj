@@ -5,11 +5,14 @@
 form {
     background-color: white;
     border-radius: 27px;
+    padding: 0 20px;
 }
 
-button {
+.btn {
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
+
     color: white;
     background-color: #285FEF;
     border-radius: 100px;
@@ -18,14 +21,56 @@ button {
     transition: all 0.3s;
 }
 
-button:hover {
+.btn:hover {
     background-color: #0030B1;
     cursor: pointer;
 }
+
+.download {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+    color: black;
+    background-color: #D6E1FF;
+    border-radius: 100px;
+    border: none;
+    padding: 15px 22px;
+    transition: all 0.3s;
+}
+
+.download:hover {
+    background-color: #c5d1f3;
+    cursor: pointer;
+}
+
+.sub-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.sub-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 180px;
+
+    gap: 10px;
+}
+
+.gen-more-container {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
 .settings {
     width: 1036px;
     height: 571px;
 }
+
 .settings-div {
     display: flex;
     flex-direction: column;

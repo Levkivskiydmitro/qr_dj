@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
 import qrcode
 from .models import QR
 from PIL import Image, ImageDraw
@@ -61,6 +62,6 @@ def render_gen_qr(request):
             qr_code = QR.objects.create(url=url, color=color, shape=shape)
             qr_code.img.save(f"qr_{qr_code.id}.png", ContentFile(qr_image_io.read()))
 
-            return redirect('my_qr')
+            return HttpResponseRedirect("home/") 
 
     return render(request, 'gen.html')
