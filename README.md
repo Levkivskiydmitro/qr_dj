@@ -82,6 +82,7 @@ def render_gen_qr(request):
             return HttpResponseRedirect("home/") 
 
     return render(request, 'gen.html')
+```
 
 #### Views.py reg
 ```python
@@ -94,6 +95,7 @@ def render_reg(request):
         User.objects.create(username= username, surname=surname, email=email, password= password)
         return redirect('auth')
     return render(request, 'reg.html')
+```
 
 #### Views.py authorization
 ```python
@@ -110,6 +112,7 @@ def render_auth(request):
             context = {"error": True}
         return redirect('/')
     return render(request, 'auth.html', context=context)
+```
 
 ####Models.py
 
@@ -129,6 +132,7 @@ class QR(models.Model):
 
     def __str__(self):
         return f'{self.url}'
+```
 
 ---
 
