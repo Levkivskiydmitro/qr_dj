@@ -82,3 +82,14 @@ button:hover {
     right: 15px;
     align-items: flex-end;
 }
+
+a{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #babcc1;
+    border-radius: 100px;
+    border: none;
+    padding: 15px 22px;
+    transition: all 0.3s;
+}
