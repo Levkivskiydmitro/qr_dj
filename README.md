@@ -114,7 +114,7 @@ def render_auth(request):
     return render(request, 'auth.html', context=context)
 ```
 
-####Models.py
+#### Models.py gen_qr
 
 ```python
 class QR(models.Model):
